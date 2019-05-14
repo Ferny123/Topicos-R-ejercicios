@@ -1,0 +1,409 @@
+#2.1 Arithmetic with R
+  5+5
+  5-5
+  3*5
+  (5+5)/2
+  5^34
+  2^5
+  28%%6
+
+#2.2 Variable assignment
+  x <- 42
+  print (x)
+
+#2.3 Variable assignment (2)
+  my_apples <- 5
+  my_apples
+  my_oranges <-6
+  my_apples + my_oranges
+  my_oranges<-6
+  my_apples + my_oranges
+  my_fruit = my_apples+my_oranges
+  my_fruit
+
+#2.4 Variable assignment (3)
+  my_apples  <- 5
+  my_oranges <- 6
+  my_apples + my_oranges
+  
+#2.5 Apples and oranges
+  my_apples <- 5
+  my_oranges <-"six"
+  my_fruit <- my_apples + my_oranges 
+  my_fruit
+  my_oranges <- 6
+  my_fruit <-my_apples + my_oranges
+  my_fruit
+
+#2.6 Basic data types in R
+  my_numeric<-42
+  my_character <-"universe"
+  my_logical<-FALSE
+
+#2.7 What's that data type?
+class(my_numeric)
+class(my_character)
+class(my_logical)
+
+#3.1
+  vegas <-"Go!"
+  numeric_vector <- c(1, 10, 49)
+  character_vector <- c("a", "b", "c")
+  boolean_vector <- c(TRUE, FALSE, TRUE)
+
+#3.3
+  poker_vector<-c(140, -50, 20, -120, 240)
+  roulette_vector<-c(-24,-50,100,-350,10)
+
+#3.4
+  some_vector<-c("John", "poker player")
+  names(some_vector)<-c("Name", "Profession")
+  names(poker_vector)<-c("Monday","Tuesday","Wednesday","Thursday","Friday")
+  names(roulette_vector) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+
+#3.5
+  poker_vector<-c(140, -50, 20, -120, 240)
+  roulette_vector<-c(-24,-50,100,-350,10)
+  days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+  names(poker_vector)<-days_vector
+  names(roulette_vector) <- days_vector
+
+#3.6
+  A_vector <-c(1,2,3)
+  B_vector<-c(4,5,6)
+  total_vector<-A_vector+B_vector
+  total_vector
+
+#3.7
+  poker_vector<-c(140, -50, 20, -120, 240)
+  roulette_vector<-c(-24,-50,100,-350,10)
+  days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+  names(poker_vector)<-days_vector
+  names(roulette_vector) <- days_vector
+  total_daily <- poker_vector + roulette_vector
+  total_daily
+
+#3.8
+  poker_vector<-c(140, -50, 20, -120, 240)
+  roulette_vector<-c(-24,-50,100,-350,10)
+  days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+  names(poker_vector)<-days_vector
+  names(roulette_vector) <- days_vector
+  total_poker <- sum(poker_vector)
+  total_poker
+  total_roulette <-  sum(roulette_vector)
+  total_roulette
+  total_week <- total_roulette + total_poker
+  total_week
+
+#3.9
+  poker_vector<-c(140, -50, 20, -120, 240)
+  roulette_vector<-c(-24,-50,100,-350,10)
+  days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+  names(poker_vector)<-days_vector
+  names(roulette_vector) <- days_vector
+  total_poker <- sum(poker_vector)
+  total_poker
+  total_roulette <-  sum(roulette_vector)
+  total_roulette
+  total_poker > total_roulette
+  
+#3.10
+  poker_vector<-c(140, -50, 20, -120, 240)
+  roulette_vector<-c(-24,-50,100,-350,10)
+  days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+  names(poker_vector)<-days_vector
+  names(roulette_vector) <- days_vector
+  poker_wednesday <- poker_vector[3]
+  poker_wednesday
+
+#3.11
+  poker_vector<-c(140, -50, 20, -120, 240)
+  roulette_vector<-c(-24,-50,100,-350,10)
+  days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+  names(poker_vector)<-days_vector
+  names(roulette_vector) <- days_vector
+  poker_midweek <- poker_vector[c(2,3,4)]
+  poker_midweek
+
+#3.12
+  poker_vector<-c(140, -50, 20, -120, 240)
+  roulette_vector<-c(-24,-50,100,-350,10)
+  days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+  names(poker_vector)<-days_vector
+  names(roulette_vector) <- days_vector
+  roulette_selection_vector <- roulette_vector[2:5]
+  roulette_selection_vector 
+  
+#3.13
+  poker_vector<-c(140, -50, 20, -120, 240)
+  roulette_vector<-c(-24,-50,100,-350,10)
+  days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+  names(poker_vector)<-days_vector
+  names(roulette_vector) <- days_vector
+  poker_start <- poker_vector[c("Monday","Tuesday","Wednesday")]
+  poker_start
+
+#3.14
+  poker_vector<-c(140, -50, 20, -120, 240)
+  roulette_vector<-c(-24,-50,100,-350,10)
+  days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+  names(poker_vector)<-days_vector
+  names(roulette_vector) <- days_vector
+  selection_vector <- poker_vector > 0
+  selection_vector    
+
+#3.15
+  poker_vector<-c(140, -50, 20, -120, 240)
+  roulette_vector<-c(-24,-50,100,-350,10)
+  days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+  names(poker_vector)<-days_vector
+  names(roulette_vector) <- days_vector
+  selection_poker_vector <- poker_vector > 0
+  selection_poker_vector    
+  poker_winning_days <- poker_vector[selection_poker_vector]
+  poker_winning_days  
+
+#3.16
+  poker_vector<-c(140, -50, 20, -120, 240)
+  roulette_vector<-c(-24,-50,100,-350,10)
+  days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+  names(poker_vector)<-days_vector
+  names(roulette_vector) <- days_vector
+  selection_roulette_vector <- roulette_vector > 0
+  selection_roulette_vector
+  roulette_winning_days <- roulette_vector[selection_roulette_vector]
+  roulette_winning_days  
+  
+#4.1
+  matrix(1:9, byrow = TRUE, nrow=3)
+
+#4.2
+  new_hope <- c(460.998, 314.4)
+  empire_strikes <- c(290.475, 247.900)
+  return_jedi <- c(309.306, 165.8)
+  box_office <- c(new_hope, empire_strikes, return_jedi)
+  box_office
+  star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE) 
+  star_wars_matrix
+  
+#4.3
+  new_hope <- c(460.998, 314.4)
+  empire_strikes <- c(290.475, 247.900)
+  return_jedi <- c(309.306, 165.8)
+  star_wars_matrix <- matrix(c(new_hope, empire_strikes, return_jedi), nrow = 3, byrow = TRUE)
+  star_wars_matrix  
+  region <- c("US", "non-US")
+  titles <- c("A New Hope", "The Empire Strikes Back", "Return of the Jedi")
+  colnames(star_wars_matrix) <- region
+  rownames(star_wars_matrix) <- titles
+  star_wars_matrix
+  
+#4.4
+  box_office <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
+  star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE,dimnames = list(c("A New Hope", "The Empire Strikes Back", "Return of the Jedi"), c("US", "non-US")))
+  star_wars_matrix
+  worldwide_vector <- rowSums(star_wars_matrix)
+  worldwide_vector
+
+#4.5
+  box_office <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
+  star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE,dimnames = list(c("A New Hope", "The Empire Strikes Back", "Return of the Jedi"), c("US", "non-US")))
+  worldwide_vector <- rowSums(star_wars_matrix)
+  all_wars_matrix <- cbind(star_wars_matrix, worldwide_vector)
+  all_wars_matrix
+  
+#4.6
+  box_office <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
+  star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE,dimnames = list(c("A New Hope", "The Empire Strikes Back", "Return of the Jedi"), c("US", "non-US")))
+  box_office2 <- c(474.5, 552.5, 310.7, 338.7, 380.3, 468.5)
+  star_wars_matrix2 <- matrix(box_office2, nrow = 3, byrow = TRUE,dimnames = list(c("The Phantom Menace", "Attack of the Clones", "Revenge of the Sith"), c("US", "non-US")))
+  all_wars_matrix <- rbind(star_wars_matrix, star_wars_matrix2)
+  all_wars_matrix
+  
+#4.7
+  all_wars_matrix
+  all_wars_matrix <- rbind(star_wars_matrix, star_wars_matrix2)
+  all_wars_matrix
+  
+#4.8
+  non_us_all <- all_wars_matrix[,2]
+  non_us_all
+  mean(non_us_all)
+  non_us_some <- all_wars_matrix[1:2,2]
+  non_us_some
+  mean(non_us_some)
+  
+#4.9 A little arithmetic with matrices
+  visitors <- all_wars_matrix / 5
+  visitors
+  
+#4.10 A little arithmetic with matrices (2)
+  ticket_office <- c(5, 6, 7, 4, 4.5, 4.9)
+  ticket_prices1 <- matrix(ticket_office, nrow = 3, byrow = TRUE,dimnames = list(c("A New Hope", "The Empire Strikes Back", "Return of the Jedi"),  c("US", "non-US")))
+  ticket_office2 <- c(5, 6, 7, 4, 4.5, 4.9)
+  ticket_prices2 <- matrix(ticket_office2, nrow = 3, byrow = TRUE,dimnames = list(c("The Phantom Menace", "Attack of the Clones", "Revenge of the Sith"),  c("US", "non-US")))
+  ticket_prices_matrix <- rbind(ticket_prices1, ticket_prices2)
+  ticket_prices_matrix
+  visitors <- all_wars_matrix / ticket_prices_matrix
+  us_visitors <- visitors[ ,1]
+  us_visitors
+  mean(us_visitors)
+  
+#5.1 What’s a factor and why would you use it?
+  theory <- "factors for categorical variables"
+  
+  
+#5.2 What’s a factor and why would you use it? (2)
+  sex_vector <- c("Male", "Female", "Female", "Male", "Male")
+  sex_vector
+  factor_sex_vector <- factor(sex_vector)
+  factor_sex_vector  
+  
+#5.3 What’s a factor and why would you use it? (3)
+  animals_vector <- c("Elephant", "Giraffe", "Donkey", "Horse")
+  animals_vector
+  class(animals_vector)
+  factor_animals_vector <- factor(animals_vector)
+  factor_animals_vector
+  temperature_vector <- c("High", "Low", "High","Low", "Medium")
+  temperature_vector
+  factor_temperature_vector <- factor(temperature_vector, order = TRUE, levels = c("Low", "Medium", "High"))
+  factor_temperature_vector
+  
+#5.4 Factor levels
+  survey_vector <- c("M", "F", "F", "M", "M")
+  survey_vector
+  factor_survey_vector <- factor(survey_vector)
+  factor_survey_vector
+  levels(factor_survey_vector) <- c("Female", "Male")
+  factor_survey_vector
+  
+#5.5 Summarizing a factor
+  survey_vector <- c("M", "F", "F", "M", "M")
+  survey_vector
+  factor_survey_vector <- factor(survey_vector)
+  levels(factor_survey_vector) <- c("Female", "Male")
+  factor_survey_vector
+  summary(survey_vector)
+  summary(factor_survey_vector)
+
+#5.6 Battle of the sexes 
+  survey_vector <- c("M", "F", "F", "M", "M")
+  factor_survey_vector <- factor(survey_vector)
+  levels(factor_survey_vector) <- c("Female", "Male")
+  male <- factor_survey_vector[1]
+  male
+  female <- factor_survey_vector[2]
+  female
+  male > female
+  
+#5.7 Ordered factors
+  speed_vector <- c("medium", "slow", "slow", "medium", "fast")
+  speed_vector
+  
+#5.8 Ordered factors (2)
+  factor_speed_vector <- factor(speed_vector, ordered = TRUE, levels = c("slow", "medium", "fast"))
+  factor_speed_vector  
+  summary(factor_speed_vector)
+  
+#5.9 Comparing ordered factors
+  speed_vector <- c("medium", "slow", "slow", "medium", "fast")
+  factor_speed_vector <- factor(speed_vector, ordered = TRUE, levels = c("slow", "medium", "fast"))
+  da2 <- factor_speed_vector[2]
+  da2
+  da5 <- factor_speed_vector[5]
+  da5
+  da2 > da5
+
+#6.1 What’s a data frame?
+  mtcars
+  class(mtcars)
+  
+#6.2 Quick, have a look at your data set
+  head(mtcars)
+  ?mtcars
+
+#6.3 Have a look at the structure
+  str(mtcars)
+  
+#6.4 Creating a data frame
+  name <- c("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
+  name
+  type <- c("Terrestrial planet", "Terrestrial planet", "Terrestrial planet", "Terrestrial planet", "Gas giant", "Gas giant", "Gas giant", "Gas giant")
+  type
+  diameter <- c(0.382, 0.949, 1, 0.532, 11.209, 9.449, 4.007, 3.883)
+  diameter
+  rotation <- c(58.64, -243.02, 1, 1.03, 0.41, 0.43, -0.72, 0.67)
+  rotation
+  rings <- c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE)
+  rings
+  planets_df <- data.frame(name, type, diameter, rotation, rings)
+  planets_df
+  
+#6.5 Creating a data frame (2)
+  str(planets_df)
+  
+#6.6 Selection of data frame elements
+  planets_df[1,3]  
+  planets_df[4, ]
+  
+#6.7 Selection of data frame elements (2)  
+  planets_df[1:5, "diameter"]  
+  
+#6.8 Only planets with rings
+  rings_vector <- planets_df$rings
+  rings_vector
+  
+  
+#6.9 Only planets with rings (2)
+  planets_df[rings_vector, ]
+  
+#6.10 Only planets with rings but shorter
+  subset(planets_df, subset = diameter < 1)
+  
+#6.11 Sorting
+  ?order()
+
+#6.12 Sorting your data frame
+  positions <- order(planets_df$diameter)
+  positions
+  planets_df[positions, ]
+  
+#7.1 Lists, why would you need them?
+
+#7.2 Lists, why would you need them? (2)
+  my_vector <- 1:10 
+  my_vector  
+  my_matrix <- matrix(1:9, ncol = 3)
+  my_matrix
+  my_df <- mtcars[1:10,]
+  my_df
+  my_list <- list(my_vector, my_matrix, my_df)
+  my_list
+  
+#7.4 Creating a named list (2)
+  mov <- "The Shining"
+  act <- c("Jack Nicholson", "Shelley Duvall",   "Danny Lloyd", "Scatman Crothers",  "Barry Nelson")
+  comments <- c("Best Horror Film I Have Ever Seen","A truly brilliant and scary film from Stanley Kubrick","A masterpiece of psychological horror")
+  comments
+  scores <- c(4.5, 4, 5)
+  scores
+  sources <- c("IMDb1", "IMDb2", "IMDb3")
+  sources
+  rev <- data.frame(scores, sources, comments)
+  rev
+  class(rev)
+  shining_list <- list(moviename = mov, actors = act, reviews = rev)
+  shining_list
+  
+#7.5 Selecting elements from a list
+  shining_list$actors
+  shining_list$actors[2]
+  
+#7.6 Adding more movie information to the list
+  shining_list_full <- c(shining_list, year = 1980)
+  shining_list_full
+  str(shining_list_full)
+
+  
